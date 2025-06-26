@@ -717,7 +717,7 @@ class MeuScanner implements java_cup.runtime.Scanner {
             // fall through
           case 19: break;
           case 7:
-            { return new Symbol(sym.MULT);
+            { return new Symbol(sym.MULTP);
             }
             // fall through
           case 20: break;
@@ -732,7 +732,7 @@ class MeuScanner implements java_cup.runtime.Scanner {
             // fall through
           case 22: break;
           case 10:
-            { return new Symbol(sym.DIV);
+            { return new Symbol(sym.DIVIS);
             }
             // fall through
           case 23: break;
@@ -748,7 +748,7 @@ class MeuScanner implements java_cup.runtime.Scanner {
             // fall through
           case 25: break;
           case 13:
-            { return new Symbol(sym.POW);
+            { return new Symbol(sym.POTEN);
             }
             // fall through
           case 26: break;

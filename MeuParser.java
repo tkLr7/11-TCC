@@ -42,29 +42,29 @@ public class MeuParser extends java_cup.runtime.lr_parser {
     unpackFromStrings(new String[] {
     "\000\027\000\010\004\010\006\004\015\007\001\002\000" +
     "\010\004\010\006\004\015\007\001\002\000\020\005\012" +
-    "\006\016\007\013\010\017\011\020\012\014\014\030\001" +
+    "\006\015\007\013\010\016\011\017\012\020\014\030\001" +
     "\002\000\004\002\027\001\002\000\010\004\010\006\004" +
     "\015\007\001\002\000\022\005\ufff7\006\ufff7\007\ufff7\010" +
     "\ufff7\011\ufff7\012\ufff7\014\ufff7\016\ufff7\001\002\000\020" +
-    "\005\012\006\016\007\013\010\017\011\020\012\014\016" +
-    "\015\001\002\000\010\004\010\006\004\015\007\001\002" +
-    "\000\010\004\010\006\004\015\007\001\002\000\010\004" +
-    "\010\006\004\015\007\001\002\000\022\005\ufff8\006\ufff8" +
-    "\007\ufff8\010\ufff8\011\ufff8\012\ufff8\014\ufff8\016\ufff8\001" +
+    "\005\012\006\015\007\013\010\016\011\017\012\020\016" +
+    "\014\001\002\000\010\004\010\006\004\015\007\001\002" +
+    "\000\010\004\010\006\004\015\007\001\002\000\022\005" +
+    "\ufff8\006\ufff8\007\ufff8\010\ufff8\011\ufff8\012\ufff8\014\ufff8" +
+    "\016\ufff8\001\002\000\010\004\010\006\004\015\007\001" +
     "\002\000\010\004\010\006\004\015\007\001\002\000\010" +
     "\004\010\006\004\015\007\001\002\000\010\004\010\006" +
-    "\004\015\007\001\002\000\022\005\ufffa\006\ufffa\007\ufffa" +
-    "\010\ufffa\011\ufffa\012\014\014\ufffa\016\ufffa\001\002\000" +
-    "\022\005\ufffb\006\ufffb\007\ufffb\010\ufffb\011\ufffb\012\014" +
-    "\014\ufffb\016\ufffb\001\002\000\022\005\ufffe\006\ufffe\007" +
-    "\ufffe\010\ufffe\011\ufffe\012\014\014\ufffe\016\ufffe\001\002" +
-    "\000\022\005\ufff9\006\ufff9\007\ufff9\010\ufff9\011\ufff9\012" +
-    "\014\014\ufff9\016\ufff9\001\002\000\022\005\ufffc\006\ufffc" +
-    "\007\ufffc\010\ufffc\011\ufffc\012\014\014\ufffc\016\ufffc\001" +
+    "\004\015\007\001\002\000\022\005\ufff9\006\ufff9\007\ufff9" +
+    "\010\ufff9\011\ufff9\012\020\014\ufff9\016\ufff9\001\002\000" +
+    "\022\005\ufffa\006\ufffa\007\ufffa\010\ufffa\011\ufffa\012\020" +
+    "\014\ufffa\016\ufffa\001\002\000\022\005\ufffb\006\ufffb\007" +
+    "\ufffb\010\ufffb\011\ufffb\012\020\014\ufffb\016\ufffb\001\002" +
+    "\000\022\005\ufffe\006\ufffe\007\ufffe\010\ufffe\011\ufffe\012" +
+    "\020\014\ufffe\016\ufffe\001\002\000\022\005\ufffc\006\ufffc" +
+    "\007\ufffc\010\ufffc\011\ufffc\012\020\014\ufffc\016\ufffc\001" +
     "\002\000\022\005\uffff\006\uffff\007\uffff\010\uffff\011\uffff" +
-    "\012\014\014\uffff\016\uffff\001\002\000\004\002\001\001" +
+    "\012\020\014\uffff\016\uffff\001\002\000\004\002\001\001" +
     "\002\000\004\002\000\001\002\000\022\005\ufffd\006\ufffd" +
-    "\007\ufffd\010\ufffd\011\ufffd\012\014\014\ufffd\016\ufffd\001" +
+    "\007\ufffd\010\ufffd\011\ufffd\012\020\014\ufffd\016\ufffd\001" +
     "\002" });
 
   /** Access to parse-action table. */
@@ -76,8 +76,8 @@ public class MeuParser extends java_cup.runtime.lr_parser {
     "\000\027\000\006\002\005\003\004\001\001\000\004\003" +
     "\030\001\001\000\002\001\001\000\002\001\001\000\004" +
     "\003\010\001\001\000\002\001\001\000\002\001\001\000" +
-    "\004\003\025\001\001\000\004\003\024\001\001\000\004" +
-    "\003\023\001\001\000\002\001\001\000\004\003\022\001" +
+    "\004\003\025\001\001\000\004\003\024\001\001\000\002" +
+    "\001\001\000\004\003\023\001\001\000\004\003\022\001" +
     "\001\000\004\003\021\001\001\000\004\003\020\001\001" +
     "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
     "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
@@ -219,7 +219,7 @@ class CUP$MeuParser$actions {
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 5: // expr ::= expr MULT expr 
+          case 5: // expr ::= expr MULTP expr 
             {
               Integer RESULT =null;
 		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
@@ -234,7 +234,7 @@ class CUP$MeuParser$actions {
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 6: // expr ::= expr DIV expr 
+          case 6: // expr ::= expr DIVIS expr 
             {
               Integer RESULT =null;
 		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
@@ -264,7 +264,7 @@ class CUP$MeuParser$actions {
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 8: // expr ::= expr POW expr 
+          case 8: // expr ::= expr POTEN expr 
             {
               Integer RESULT =null;
 		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
@@ -274,8 +274,13 @@ class CUP$MeuParser$actions {
 		int bright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
 		Integer b = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
 		 
-           RESULT = new Integer((int) Math.pow(a.intValue(), b.intValue()));
-        
+           RESULT = new Integer(
+                      (int) Math.pow(
+                        a.intValue(), 
+                        b.intValue()
+                      )
+                    );
+         
               CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
