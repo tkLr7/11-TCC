@@ -1,0 +1,49 @@
+import java_cup.runtime.*;
+
+parser code {:
+  public static void main(String[] args) throws Exception {
+    Compilador compilador = new Compilador();
+    compilador.compilar(args[0]);
+  }
+:}
+
+parser code {:
+  public static void main(String[] args) throws Exception {
+    MeuScanner lexer = new MeuScanner(new java.io.FileReader(args[0]));
+    parser parser = new parser(lexer);
+    Object result = parser.parse().value;
+    System.out.println("Result = " + result);
+  }
+:}
+
+
+terminal SELECT, FROM, WHERE, IGUAL, MENOR, MAIOR, VIRG, PONTOEVIRG, MUL;
+terminal String IDENT, STRING;
+terminal Integer NUMERO;
+
+non terminal comando, campos, tabela, condicao, campos_lista, valor;
+
+start with comando;
+
+comando ::= SELECT campos FROM tabela WHERE condicao PONTOEVIRG {: System.out.println("Documento SQL válido."); :}
+           | SELECT campos FROM tabela PONTOEVIRG {: System.out.println("Documento SQL válido."); :}
+           ;
+
+campos ::= campos_lista
+         | MUL {: System.out.println("Selecionando todos os campos"); :}
+         ;
+
+campos_lista ::= IDENT
+               | campos_lista VIRG IDENT
+               ;
+
+tabela ::= IDENT;
+
+condicao ::= IDENT IGUAL valor
+           | IDENT MAIOR valor
+           | IDENT MENOR valor
+           ;
+
+valor ::= STRING
+        | NUMERO
+        ;

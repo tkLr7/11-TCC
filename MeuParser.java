@@ -29,13 +29,11 @@ public class MeuParser extends java_cup.runtime.lr_parser {
   /** Production table. */
   protected static final short _production_table[][] = 
     unpackFromStrings(new String[] {
-    "\000\023\000\002\002\004\000\002\002\003\000\002\002" +
-    "\003\000\002\003\003\000\002\003\003\000\002\003\003" +
-    "\000\002\003\003\000\002\003\003\000\002\003\003\000" +
-    "\002\003\003\000\002\006\004\000\002\006\005\000\002" +
-    "\004\004\000\002\004\005\000\002\007\003\000\002\007" +
-    "\005\000\002\010\005\000\002\005\003\000\002\005\005" +
-    "" });
+    "\000\015\000\002\002\004\000\002\002\011\000\002\002" +
+    "\007\000\002\003\003\000\002\003\003\000\002\006\003" +
+    "\000\002\006\005\000\002\004\003\000\002\005\005\000" +
+    "\002\005\005\000\002\005\005\000\002\007\003\000\002" +
+    "\007\003" });
 
   /** Access to production table. */
   public short[][] production_table() {return _production_table;}
@@ -43,28 +41,20 @@ public class MeuParser extends java_cup.runtime.lr_parser {
   /** Parse-action table. */
   protected static final short[][] _action_table = 
     unpackFromStrings(new String[] {
-    "\000\035\000\006\004\006\006\010\001\002\000\004\002" +
-    "\uffff\001\002\000\004\002\037\001\002\000\006\005\026" +
-    "\012\027\001\002\000\004\002\000\001\002\000\022\004" +
-    "\006\006\010\007\020\012\014\013\015\014\012\015\017" +
-    "\016\013\001\002\000\010\005\ufffe\007\ufffe\011\ufffe\001" +
-    "\002\000\010\005\ufffa\007\ufffa\011\ufffa\001\002\000\010" +
-    "\005\ufff8\007\ufff8\011\ufff8\001\002\000\010\005\ufffc\007" +
-    "\ufffc\011\ufffc\001\002\000\010\005\ufffb\007\ufffb\011\ufffb" +
-    "\001\002\000\006\007\024\011\023\001\002\000\010\005" +
-    "\ufff9\007\ufff9\011\ufff9\001\002\000\012\002\ufff5\005\ufff5" +
-    "\007\ufff5\011\ufff5\001\002\000\010\005\ufffd\007\ufffd\011" +
-    "\ufffd\001\002\000\006\007\ufff0\011\ufff0\001\002\000\020" +
-    "\004\006\006\010\012\014\013\015\014\012\015\017\016" +
-    "\013\001\002\000\012\002\ufff4\005\ufff4\007\ufff4\011\ufff4" +
-    "\001\002\000\006\007\uffef\011\uffef\001\002\000\012\002" +
-    "\ufff7\005\ufff7\007\ufff7\011\ufff7\001\002\000\004\010\035" +
-    "\001\002\000\006\005\032\011\033\001\002\000\006\005" +
-    "\ufff3\011\ufff3\001\002\000\012\002\ufff6\005\ufff6\007\ufff6" +
-    "\011\ufff6\001\002\000\004\012\027\001\002\000\006\005" +
-    "\ufff2\011\ufff2\001\002\000\020\004\006\006\010\012\014" +
-    "\013\015\014\012\015\017\016\013\001\002\000\006\005" +
-    "\ufff1\011\ufff1\001\002\000\004\002\001\001\002" });
+    "\000\032\000\004\004\005\001\002\000\004\002\034\001" +
+    "\002\000\006\014\010\015\011\001\002\000\004\005\014" +
+    "\001\002\000\006\005\ufffe\012\012\001\002\000\004\005" +
+    "\ufffd\001\002\000\006\005\ufffc\012\ufffc\001\002\000\004" +
+    "\015\013\001\002\000\006\005\ufffb\012\ufffb\001\002\000" +
+    "\004\015\015\001\002\000\006\006\ufffa\013\ufffa\001\002" +
+    "\000\006\006\017\013\020\001\002\000\004\015\022\001" +
+    "\002\000\004\002\uffff\001\002\000\004\013\033\001\002" +
+    "\000\010\007\023\010\025\011\024\001\002\000\006\016" +
+    "\027\017\026\001\002\000\006\016\027\017\026\001\002" +
+    "\000\006\016\027\017\026\001\002\000\004\013\ufff5\001" +
+    "\002\000\004\013\ufff6\001\002\000\004\013\ufff7\001\002" +
+    "\000\004\013\ufff8\001\002\000\004\013\ufff9\001\002\000" +
+    "\004\002\000\001\002\000\004\002\001\001\002" });
 
   /** Access to parse-action table. */
   public short[][] action_table() {return _action_table;}
@@ -72,18 +62,16 @@ public class MeuParser extends java_cup.runtime.lr_parser {
   /** <code>reduce_goto</code> table. */
   protected static final short[][] _reduce_table = 
     unpackFromStrings(new String[] {
-    "\000\035\000\010\002\004\004\003\006\006\001\001\000" +
-    "\002\001\001\000\002\001\001\000\006\007\027\010\030" +
-    "\001\001\000\002\001\001\000\012\003\021\004\020\005" +
-    "\015\006\010\001\001\000\002\001\001\000\002\001\001" +
-    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
-    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
-    "\001\001\000\002\001\001\000\010\003\024\004\020\006" +
-    "\010\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\000\032\000\004\002\003\001\001\000\002\001\001\000" +
+    "\006\003\005\006\006\001\001\000\002\001\001\000\002" +
     "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
-    "\001\000\002\001\001\000\004\010\033\001\001\000\002" +
-    "\001\001\000\010\003\035\004\020\006\010\001\001\000" +
-    "\002\001\001\000\002\001\001" });
+    "\001\000\002\001\001\000\004\004\015\001\001\000\002" +
+    "\001\001\000\002\001\001\000\004\005\020\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\004" +
+    "\007\031\001\001\000\004\007\030\001\001\000\004\007" +
+    "\027\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001" });
 
   /** Access to <code>reduce_goto</code> table. */
   public short[][] reduce_table() {return _reduce_table;}
@@ -153,7 +141,7 @@ class CUP$MeuParser$actions {
       switch (CUP$MeuParser$act_num)
         {
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 0: // $START ::= json_documento EOF 
+          case 0: // $START ::= comando EOF 
             {
               Object RESULT =null;
 		int start_valleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).left;
@@ -167,164 +155,110 @@ class CUP$MeuParser$actions {
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 1: // json_documento ::= jsoninfo 
+          case 1: // comando ::= SELECT campos FROM tabela WHERE condicao PONTOEVIRG 
             {
               Object RESULT =null;
-		 System.out.println("Documento JSON com objeto raiz válido."); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json_documento",0, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+		 System.out.println("Documento SQL válido."); 
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("comando",0, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-6)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 2: // json_documento ::= jsonarray 
+          case 2: // comando ::= SELECT campos FROM tabela PONTOEVIRG 
             {
               Object RESULT =null;
-		 System.out.println("Documento JSON com array raiz válido."); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json_documento",0, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+		 System.out.println("Documento SQL válido."); 
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("comando",0, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-4)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 3: // json ::= jsoninfo 
+          case 3: // campos ::= campos_lista 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("campos",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 4: // json ::= jsonarray 
+          case 4: // campos ::= MUL 
             {
               Object RESULT =null;
-
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+		 System.out.println("Selecionando todos os campos"); 
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("campos",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 5: // json ::= STRING 
+          case 5: // campos_lista ::= IDENT 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("campos_lista",4, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 6: // json ::= NUMERO 
+          case 6: // campos_lista ::= campos_lista VIRG IDENT 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("campos_lista",4, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 7: // json ::= TRUE 
+          case 7: // tabela ::= IDENT 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("tabela",2, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 8: // json ::= FALSE 
+          case 8: // condicao ::= IDENT IGUAL valor 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("condicao",3, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 9: // json ::= NULL 
+          case 9: // condicao ::= IDENT MAIOR valor 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("condicao",3, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 10: // jsoninfo ::= ACHAVE FCHAVE 
+          case 10: // condicao ::= IDENT MENOR valor 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoninfo",4, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("condicao",3, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 11: // jsoninfo ::= ACHAVE jsoncomponente FCHAVE 
+          case 11: // valor ::= STRING 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoninfo",4, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("valor",5, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 12: // jsonarray ::= ACOLCHETE FCOLCHETE 
+          case 12: // valor ::= NUMERO 
             {
               Object RESULT =null;
 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonarray",2, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
-            }
-          return CUP$MeuParser$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 13: // jsonarray ::= ACOLCHETE jsonelementos FCOLCHETE 
-            {
-              Object RESULT =null;
-
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonarray",2, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
-            }
-          return CUP$MeuParser$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 14: // jsoncomponente ::= jsonteste 
-            {
-              Object RESULT =null;
-
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoncomponente",5, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
-            }
-          return CUP$MeuParser$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 15: // jsoncomponente ::= jsoncomponente VIRG jsonteste 
-            {
-              Object RESULT =null;
-
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoncomponente",5, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
-            }
-          return CUP$MeuParser$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 16: // jsonteste ::= STRING DPONTOS json 
-            {
-              Object RESULT =null;
-
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonteste",6, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
-            }
-          return CUP$MeuParser$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 17: // jsonelementos ::= json 
-            {
-              Object RESULT =null;
-
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonelementos",3, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
-            }
-          return CUP$MeuParser$result;
-
-          /*. . . . . . . . . . . . . . . . . . . .*/
-          case 18: // jsonelementos ::= jsonelementos VIRG json 
-            {
-              Object RESULT =null;
-
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonelementos",3, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("valor",5, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 

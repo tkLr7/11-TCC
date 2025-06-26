@@ -10,13 +10,13 @@ wget https://repo1.maven.org/maven2/de/jflex/jflex/1.8.2/jflex-1.8.2.jar -O jfle
 wget https://repo1.maven.org/maven2/com/github/vbmacher/java-cup/11b-20160615/java-cup-11b-20160615.jar -O jcup.jar
 
 # Gerar o Analisador Léxico:
-java -cp jflex.jar:jcup.jar jflex.Main json.flex
+java -cp jflex.jar:jcup.jar jflex.Main sql.flex
 
 # Gerar o Analisador Sintático:
-java -cp jcup.jar java_cup.Main -parser MeuParser json.cup
+java -cp jcup.jar java_cup.Main -parser MeuParser sql.cup
 
 # Compilar as classes .java:
 javac -cp jcup.jar *.java
 
 # Executar a classe principal:
-java -cp .:jcup.jar MeuParser ./json.txt
+java -cp .:jcup.jar MeuParser ./entradasql.txt
