@@ -1,0 +1,1 @@
+{ "interesses": ["moda", "viagem", "fitness"], "contato": { "telefone": "11999999999", "email": "maria@email.com", "cidade": "São Paulo" }, "compras": [120, 89, 45], "cliente": "Maria", "anos": 28, "temPlano": true, "cadastro_ativo": null }

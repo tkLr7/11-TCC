@@ -29,10 +29,13 @@ public class MeuParser extends java_cup.runtime.lr_parser {
   /** Production table. */
   protected static final short _production_table[][] = 
     unpackFromStrings(new String[] {
-    "\000\013\000\002\002\004\000\002\002\004\000\002\003" +
-    "\005\000\002\003\005\000\002\003\004\000\002\003\005" +
-    "\000\002\003\005\000\002\003\005\000\002\003\005\000" +
-    "\002\003\005\000\002\003\003" });
+    "\000\023\000\002\002\004\000\002\002\003\000\002\002" +
+    "\003\000\002\003\003\000\002\003\003\000\002\003\003" +
+    "\000\002\003\003\000\002\003\003\000\002\003\003\000" +
+    "\002\003\003\000\002\006\004\000\002\006\005\000\002" +
+    "\004\004\000\002\004\005\000\002\007\003\000\002\007" +
+    "\005\000\002\010\005\000\002\005\003\000\002\005\005" +
+    "" });
 
   /** Access to production table. */
   public short[][] production_table() {return _production_table;}
@@ -40,32 +43,28 @@ public class MeuParser extends java_cup.runtime.lr_parser {
   /** Parse-action table. */
   protected static final short[][] _action_table = 
     unpackFromStrings(new String[] {
-    "\000\027\000\010\004\010\006\004\015\007\001\002\000" +
-    "\010\004\010\006\004\015\007\001\002\000\020\005\012" +
-    "\006\015\007\013\010\016\011\017\012\020\014\030\001" +
-    "\002\000\004\002\027\001\002\000\010\004\010\006\004" +
-    "\015\007\001\002\000\022\005\ufff7\006\ufff7\007\ufff7\010" +
-    "\ufff7\011\ufff7\012\ufff7\014\ufff7\016\ufff7\001\002\000\020" +
-    "\005\012\006\015\007\013\010\016\011\017\012\020\016" +
-    "\014\001\002\000\010\004\010\006\004\015\007\001\002" +
-    "\000\010\004\010\006\004\015\007\001\002\000\022\005" +
-    "\ufff8\006\ufff8\007\ufff8\010\ufff8\011\ufff8\012\ufff8\014\ufff8" +
-    "\016\ufff8\001\002\000\010\004\010\006\004\015\007\001" +
-    "\002\000\010\004\010\006\004\015\007\001\002\000\010" +
-    "\004\010\006\004\015\007\001\002\000\010\004\010\006" +
-    "\004\015\007\001\002\000\022\005\ufff9\006\ufff9\007\ufff9" +
-    "\010\ufff9\011\ufff9\012\020\014\ufff9\016\ufff9\001\002\000" +
-    "\022\005\ufffa\006\ufffa\007\ufffa\010\ufffa\011\ufffa\012\020" +
-    "\014\ufffa\016\ufffa\001\002\000\022\005\ufffb\006\ufffb\007" +
-    "\ufffb\010\ufffb\011\ufffb\012\020\014\ufffb\016\ufffb\001\002" +
-    "\000\022\005\ufffe\006\ufffe\007\ufffe\010\ufffe\011\ufffe\012" +
-    "\020\014\ufffe\016\ufffe\001\002\000\022\005\ufffc\006\ufffc" +
-    "\007\ufffc\010\ufffc\011\ufffc\012\020\014\ufffc\016\ufffc\001" +
-    "\002\000\022\005\uffff\006\uffff\007\uffff\010\uffff\011\uffff" +
-    "\012\020\014\uffff\016\uffff\001\002\000\004\002\001\001" +
-    "\002\000\004\002\000\001\002\000\022\005\ufffd\006\ufffd" +
-    "\007\ufffd\010\ufffd\011\ufffd\012\020\014\ufffd\016\ufffd\001" +
-    "\002" });
+    "\000\035\000\006\004\006\006\010\001\002\000\004\002" +
+    "\uffff\001\002\000\004\002\037\001\002\000\006\005\026" +
+    "\012\027\001\002\000\004\002\000\001\002\000\022\004" +
+    "\006\006\010\007\020\012\014\013\015\014\012\015\017" +
+    "\016\013\001\002\000\010\005\ufffe\007\ufffe\011\ufffe\001" +
+    "\002\000\010\005\ufffa\007\ufffa\011\ufffa\001\002\000\010" +
+    "\005\ufff8\007\ufff8\011\ufff8\001\002\000\010\005\ufffc\007" +
+    "\ufffc\011\ufffc\001\002\000\010\005\ufffb\007\ufffb\011\ufffb" +
+    "\001\002\000\006\007\024\011\023\001\002\000\010\005" +
+    "\ufff9\007\ufff9\011\ufff9\001\002\000\012\002\ufff5\005\ufff5" +
+    "\007\ufff5\011\ufff5\001\002\000\010\005\ufffd\007\ufffd\011" +
+    "\ufffd\001\002\000\006\007\ufff0\011\ufff0\001\002\000\020" +
+    "\004\006\006\010\012\014\013\015\014\012\015\017\016" +
+    "\013\001\002\000\012\002\ufff4\005\ufff4\007\ufff4\011\ufff4" +
+    "\001\002\000\006\007\uffef\011\uffef\001\002\000\012\002" +
+    "\ufff7\005\ufff7\007\ufff7\011\ufff7\001\002\000\004\010\035" +
+    "\001\002\000\006\005\032\011\033\001\002\000\006\005" +
+    "\ufff3\011\ufff3\001\002\000\012\002\ufff6\005\ufff6\007\ufff6" +
+    "\011\ufff6\001\002\000\004\012\027\001\002\000\006\005" +
+    "\ufff2\011\ufff2\001\002\000\020\004\006\006\010\012\014" +
+    "\013\015\014\012\015\017\016\013\001\002\000\006\005" +
+    "\ufff1\011\ufff1\001\002\000\004\002\001\001\002" });
 
   /** Access to parse-action table. */
   public short[][] action_table() {return _action_table;}
@@ -73,15 +72,18 @@ public class MeuParser extends java_cup.runtime.lr_parser {
   /** <code>reduce_goto</code> table. */
   protected static final short[][] _reduce_table = 
     unpackFromStrings(new String[] {
-    "\000\027\000\006\002\005\003\004\001\001\000\004\003" +
-    "\030\001\001\000\002\001\001\000\002\001\001\000\004" +
-    "\003\010\001\001\000\002\001\001\000\002\001\001\000" +
-    "\004\003\025\001\001\000\004\003\024\001\001\000\002" +
-    "\001\001\000\004\003\023\001\001\000\004\003\022\001" +
-    "\001\000\004\003\021\001\001\000\004\003\020\001\001" +
+    "\000\035\000\010\002\004\004\003\006\006\001\001\000" +
+    "\002\001\001\000\002\001\001\000\006\007\027\010\030" +
+    "\001\001\000\002\001\001\000\012\003\021\004\020\005" +
+    "\015\006\010\001\001\000\002\001\001\000\002\001\001" +
     "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
     "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
-    "\001\001\000\002\001\001\000\002\001\001" });
+    "\001\001\000\002\001\001\000\010\003\024\004\020\006" +
+    "\010\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\004\010\033\001\001\000\002" +
+    "\001\001\000\010\003\035\004\020\006\010\001\001\000" +
+    "\002\001\001\000\002\001\001" });
 
   /** Access to <code>reduce_goto</code> table. */
   public short[][] reduce_table() {return _reduce_table;}
@@ -151,7 +153,7 @@ class CUP$MeuParser$actions {
       switch (CUP$MeuParser$act_num)
         {
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 0: // $START ::= inicio EOF 
+          case 0: // $START ::= json_documento EOF 
             {
               Object RESULT =null;
 		int start_valleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).left;
@@ -165,147 +167,164 @@ class CUP$MeuParser$actions {
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 1: // inicio ::= expr PTVIRG 
+          case 1: // json_documento ::= jsoninfo 
             {
               Object RESULT =null;
-		int eleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).left;
-		int eright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).right;
-		Integer e = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).value;
-		 System.out.println(e); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("inicio",0, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+		 System.out.println("Documento JSON com objeto raiz válido."); 
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json_documento",0, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 2: // expr ::= expr MAIS expr 
+          case 2: // json_documento ::= jsonarray 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).value;
-		int bleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int bright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer b = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 RESULT = a.intValue() + b.intValue(); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+		 System.out.println("Documento JSON com array raiz válido."); 
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json_documento",0, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 3: // expr ::= expr MENOS expr 
+          case 3: // json ::= jsoninfo 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).value;
-		int bleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int bright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer b = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 RESULT = a.intValue() - b.intValue(); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 4: // expr ::= MENOS expr 
+          case 4: // json ::= jsonarray 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 RESULT = -a; 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 5: // expr ::= expr MULTP expr 
+          case 5: // json ::= STRING 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).value;
-		int bleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int bright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer b = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 RESULT = a.intValue() * b.intValue(); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 6: // expr ::= expr DIVIS expr 
+          case 6: // json ::= NUMERO 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).value;
-		int bleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int bright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer b = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 RESULT = a.intValue() / b.intValue(); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 7: // expr ::= expr RESTO expr 
+          case 7: // json ::= TRUE 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).value;
-		int bleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int bright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer b = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 RESULT = a.intValue() % b.intValue(); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 8: // expr ::= expr POTEN expr 
+          case 8: // json ::= FALSE 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)).value;
-		int bleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int bright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer b = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 
-           RESULT = new Integer(
-                      (int) Math.pow(
-                        a.intValue(), 
-                        b.intValue()
-                      )
-                    );
-         
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 9: // expr ::= PARENTESQ expr PARENTDIR 
+          case 9: // json ::= NULL 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)).value;
-		 RESULT = a.intValue(); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("json",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 10: // expr ::= INTEIRO 
+          case 10: // jsoninfo ::= ACHAVE FCHAVE 
             {
-              Integer RESULT =null;
-		int aleft = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).left;
-		int aright = ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()).right;
-		Integer a = (Integer)((java_cup.runtime.Symbol) CUP$MeuParser$stack.peek()).value;
-		 RESULT = a.intValue(); 
-              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("expr",1, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoninfo",4, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 11: // jsoninfo ::= ACHAVE jsoncomponente FCHAVE 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoninfo",4, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 12: // jsonarray ::= ACOLCHETE FCOLCHETE 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonarray",2, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-1)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 13: // jsonarray ::= ACOLCHETE jsonelementos FCOLCHETE 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonarray",2, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 14: // jsoncomponente ::= jsonteste 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoncomponente",5, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 15: // jsoncomponente ::= jsoncomponente VIRG jsonteste 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsoncomponente",5, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 16: // jsonteste ::= STRING DPONTOS json 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonteste",6, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 17: // jsonelementos ::= json 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonelementos",3, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
+            }
+          return CUP$MeuParser$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 18: // jsonelementos ::= jsonelementos VIRG json 
+            {
+              Object RESULT =null;
+
+              CUP$MeuParser$result = parser.getSymbolFactory().newSymbol("jsonelementos",3, ((java_cup.runtime.Symbol)CUP$MeuParser$stack.elementAt(CUP$MeuParser$top-2)), ((java_cup.runtime.Symbol)CUP$MeuParser$stack.peek()), RESULT);
             }
           return CUP$MeuParser$result;
 

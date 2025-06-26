@@ -6,33 +6,33 @@
 /** CUP generated class containing symbol constants. */
 public class sym {
   /* terminals */
-  public static final int MAIS = 3;
-  public static final int PTVIRG = 10;
-  public static final int MENOSUNARIO = 9;
-  public static final int INTEIRO = 2;
-  public static final int MENOS = 4;
-  public static final int RESTO = 7;
-  public static final int POTEN = 8;
+  public static final int TRUE = 10;
+  public static final int NULL = 12;
+  public static final int ACHAVE = 2;
+  public static final int ACOLCHETE = 4;
+  public static final int DPONTOS = 6;
+  public static final int STRING = 8;
   public static final int EOF = 0;
-  public static final int PARENTESQ = 11;
+  public static final int NUMERO = 9;
+  public static final int FALSE = 11;
+  public static final int FCOLCHETE = 5;
   public static final int error = 1;
-  public static final int PARENTDIR = 12;
-  public static final int DIVIS = 6;
-  public static final int MULTP = 5;
+  public static final int VIRG = 7;
+  public static final int FCHAVE = 3;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
-  "INTEIRO",
-  "MAIS",
-  "MENOS",
-  "MULTP",
-  "DIVIS",
-  "RESTO",
-  "POTEN",
-  "MENOSUNARIO",
-  "PTVIRG",
-  "PARENTESQ",
-  "PARENTDIR"
+  "ACHAVE",
+  "FCHAVE",
+  "ACOLCHETE",
+  "FCOLCHETE",
+  "DPONTOS",
+  "VIRG",
+  "STRING",
+  "NUMERO",
+  "TRUE",
+  "FALSE",
+  "NULL"
   };
 }
 

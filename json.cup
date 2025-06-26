@@ -1,0 +1,59 @@
+import java_cup.runtime.*;
+
+parser code {:
+  public static void main(String[] args) throws Exception {
+    Compilador compilador = new Compilador();
+    compilador.compilar(args[0]);
+  }
+:}
+
+
+parser code {:
+  public static void main(String[] args) throws Exception {
+    JsonScanner lexer = new JsonScanner(new java.io.FileReader(args[0]));
+    parser parser = new parser(lexer);
+    Object result = parser.parse().value;
+    System.out.println("Result = " + result);
+  }
+:}
+
+
+terminal ACHAVE, FCHAVE, ACOLCHETE, FCOLCHETE, DPONTOS, VIRG;
+terminal String STRING;
+terminal Double NUMERO;
+terminal TRUE, FALSE, NULL;
+
+non terminal json_documento, json, jsonarray, jsonelementos, jsoninfo, jsoncomponente, jsonteste;
+
+start with json_documento;
+
+json_documento  ::= jsoninfo {: System.out.println("Documento JSON com objeto raiz válido."); :}
+                | jsonarray  {: System.out.println("Documento JSON com array raiz válido."); :}
+                ;
+
+json            ::= jsoninfo 
+                | jsonarray 
+                | STRING 
+                | NUMERO 
+                | TRUE 
+                | FALSE 
+                | NULL
+                ;
+
+jsoninfo        ::= ACHAVE FCHAVE
+                | ACHAVE jsoncomponente FCHAVE
+                ;
+
+jsonarray       ::= ACOLCHETE FCOLCHETE 
+                | ACOLCHETE jsonelementos FCOLCHETE
+                ;
+
+jsoncomponente  ::= jsonteste 
+                | jsoncomponente VIRG jsonteste
+                ;
+
+jsonteste       ::= STRING DPONTOS json;
+
+jsonelementos   ::= json 
+                | jsonelementos VIRG json
+                ;
